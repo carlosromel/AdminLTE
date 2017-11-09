@@ -775,9 +775,13 @@ throw new Error('AdminLTE requires jQuery')
     }
 
     if (!isOpen) {
-      this.open();
+      this.open(
+        $(Selector.button).attr('aria-pressed', 'true')
+      );
     } else {
-      this.close();
+      this.close(
+        $(Selector.button).attr('aria-pressed', 'false')
+      );
     }
   };
 
